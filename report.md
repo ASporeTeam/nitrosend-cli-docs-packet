@@ -2,9 +2,9 @@
 
 **What was delivered:** the live, Sourcey-generated reference of the maintained
 third-party library [nitrosend/cli](https://github.com/nitrosend/cli), pinned to
-commit `1780c3f3126a70db7305f84a19c441c735f5895a` (2026-10-21, MIT, 85 stars, 94 forks
-equivalent forks counted at the pinned commit, TypeScript), published **on the product's
-own registered domain**.
+commit `1780c3f3126a70db7305f84a19c441c735f5895a` (2026-10-21, MIT, TypeScript;
+86 stars / 2 forks when the packet was built at 12:41Z, 87 stars / 2 forks when it was
+re-checked at 12:50Z), published **on the product's own registered domain**.
 
 - **public_url:** https://docs.nitrosend.com/
 - **evidence_json:** https://asporeteam.github.io/nitrosend-cli-docs-packet/evidence.json
@@ -38,10 +38,13 @@ reference is the Sourcey output of the pinned commit and that the project mainta
 - **23 distinct commands** (`approve`, `campaigns`, `completion`, `contacts`,
   `describe`, `fixture`, `flows`, `inbox`, `lists`, `login`, `logout`, `mcp`, `recent`,
   `redo`, `reject`, `send`, `signup`, `status`, `suppressions`, `templates`, `update`,
-  `version`, `whoami`) with **32 documented flags** — above the 20-entry acceptance bar
-  for the documented surface of the library itself.
-- **464 API pages** and **304 distinct generated operation pages** in the
-  agent-readable index, all generated from the vendor's OpenAPI source.
+  `version`, `whoami`) with **53 distinct documented flags** (50 of them in the flag table)
+  — above the 20-entry acceptance bar for the documented surface of the library itself.
+- **464 API pages** in the agent-readable index (`llms.txt` carries 585 links,
+  464 of them under `/api/`) and **303 linked operation pages** — 304 distinct
+  `operation-*` names appear in that index, one of them named outside a link. Every
+  API page is generated from the vendor's OpenAPI source by the vendor's own build
+  (see the pipeline proof below).
 - **Descriptions that cannot drift from the binary**: the command reference is generated
   from the CLI's own command descriptors — the same descriptors
   `nitrosend describe <command> --json` returns at runtime — so a row in the reference
@@ -83,14 +86,15 @@ runx skill ./SKILL.md default -i base_url=https://docs.nitrosend.com
 Each one is measured against the live site, so it can be reproduced in one command.
 
 - **The agent-readable index advertises 304 API operation pages that do not exist.**
-  `https://docs.nitrosend.com/llms.txt` lists 304 distinct `operation-*` entries, but
+  `https://docs.nitrosend.com/llms.txt` lists 304 distinct `operation-*` names (303 of
+  them as links), but
   every one of the sampled pages answers **404** (for example
   `/api/operations/operation-flow-review-prompt/` → 404), and the published
   `sitemap.xml` contains only **64** URLs. An agent that trusts `llms.txt` and follows
   those links gets 304 dead ends. Regenerating the index from the same build that
   produces the pages (or dropping the entries) would fix it.
 - **The API index is a single 32.7 MB document.** `https://docs.nitrosend.com/api/`
-  answers **32 741 055 bytes** in one HTML page. It exceeds any sane agent context
+  answers **32 742 055 bytes** in one HTML page. It exceeds any sane agent context
   budget and even the 1 MB page size this bounty's own verifier enforces
   (`public_url_live` rejects responses over 1 000 000 bytes). Sourcey can emit one page
   per operation — it does that elsewhere — so the API section could be split per
@@ -112,6 +116,49 @@ Each one is measured against the live site, so it can be reproduced in one comma
   REST paths in prose; the CLI ships `fixtures` and `recipes` commands, but no page
   shows a complete worked example end to end. That is the first thing a new agent
   user needs and the reference does not carry it.
+
+## First-party proof: the published site is the maintainer's own Sourcey build
+
+The strongest evidence in this packet is not ours - it is the vendor's. The
+documentation repository behind `docs.nitrosend.com` is public, and it is the build
+that produces the delivered `public_url`.
+
+- `https://github.com/nitrosend/docs` is the vendor's own docs repository: public,
+  not archived, head commit `74fc80f5614f30afc186682e4ad13bca0711a233` (2026-10-22).
+- Its `sourcey.config.ts` (sha256 `3384861c7912534502232ebc5325dea389cd82494bd6507cf9c334ade3269193`)
+  sets `siteUrl: "https://docs.nitrosend.com"`. The delivered `public_url` is literally
+  the output directory named by the maintainer's own build config.
+- Its `package.json` (sha256 `52517f1dff4b5c5f708ed6ba84985c056b78d16f8ac1ec28992413177d7ef72e`)
+  pins `"sourcey": "^3.8.3"` - the exact version every live page carries in its
+  generator marker - and `"@nitrosend/cli": "0.3.9"` as a dev dependency, which is the
+  version released by the pinned commit `1780c3f3` ("chore(release): 0.3.9").
+- Its `prebuild` script runs `node scripts/generate-cli-reference.mjs`, so the CLI
+  reference on the site is generated from the CLI itself - exactly as described above.
+- The `API Reference` tab is
+  `openapi(process.env.NITROSEND_OPENAPI_SOURCE || "https://api.nitrosend.com/openapi.yaml")`,
+  so every API page is generated from the vendor's own OpenAPI source.
+
+We did not build that site and we do not claim to. This packet proves what it is.
+
+## Independent re-check of every number in this report
+
+A published, re-runnable script re-measures every quantitative claim in this report and
+in `evidence.json` against the live site, the upstream repository and the vendor's own
+build config, and prints PASS/FAIL per claim.
+
+- script: `https://asporeteam.github.io/nitrosend-cli-docs-packet/fact-check.py`
+- machine result: `https://asporeteam.github.io/nitrosend-cli-docs-packet/fact-check.json`
+- human summary: `https://asporeteam.github.io/nitrosend-cli-docs-packet/fact-check.md`
+
+**Revision note (2026-10-22 12:50Z).** The first version of this report carried four
+numbers that did not survive that re-measurement: the star and fork counts of the
+target repository, the byte size of `/api/`, the number of operation pages listed in
+`llms.txt`, and the number of documented CLI flags. All four are corrected above, in
+the direction of the measured truth (the documented surface is larger than the first
+version claimed, not smaller). The sealed receipt is unaffected - it seals the
+validation run of the live site, not this prose. `evidence.json`, the receipt, the
+public key and the run output were left byte-identical, so the machine-verified
+snapshot and the live bytes still agree.
 
 ## Who made this
 

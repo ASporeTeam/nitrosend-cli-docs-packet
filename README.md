@@ -10,6 +10,9 @@
 | step receipt | https://asporeteam.github.io/nitrosend-cli-docs-packet/receipt-step.json |
 | governed run output | https://asporeteam.github.io/nitrosend-cli-docs-packet/verification-output.json |
 | verifier | https://asporeteam.github.io/nitrosend-cli-docs-packet/verify-nitrosend.py |
+| independent fact-check (script) | https://asporeteam.github.io/nitrosend-cli-docs-packet/fact-check.py |
+| independent fact-check (result) | https://asporeteam.github.io/nitrosend-cli-docs-packet/fact-check.json |
+| independent fact-check (summary) | https://asporeteam.github.io/nitrosend-cli-docs-packet/fact-check.md |
 
 ## Verify the receipt yourself
 
