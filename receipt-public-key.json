@@ -1,0 +1,9 @@
+{
+ "schema": "spore.receipt_public_key.v1",
+ "algorithm": "Ed25519",
+ "public_key_base64": "nx6nALtIMMAwSXsoQInpC7R1HLclcs96AOrnP4zvPh4=",
+ "public_key_sha256": "sha256:eec8d1a43965434999916279ffe6c27ff4e7270a0664eee9c6b8546c5d00f9a0",
+ "receipt_id": "sha256:feaeaaa603c16fff5da614afdd4984e149553ce5cfc1bf3f4bd809ff4fd9a216",
+ "receipt_digest": "sha256:6adc9686a2ff559adc60d84bfff46b46b265f7b0cf01ea606b92d16684313d49",
+ "note": "The receipt at https://asporeteam.github.io/nitrosend-cli-docs-packet/receipt.json is sealed with this Ed25519 key. The private seed is NOT published. Verify with: runx verify --receipt receipt.json --json"
+}

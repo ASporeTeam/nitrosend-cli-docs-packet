@@ -1,0 +1,145 @@
+{
+ "artifacts": {
+  "LICENSE @ 1780c3f3126a70db7305f84a19c441c735f5895a": {
+   "bytes": 1066,
+   "sha256": "d521ee46916625350b576dab039756581b94c15bf026030f354fa1a0b82ee0d4",
+   "url": "https://raw.githubusercontent.com/nitrosend/cli/1780c3f3126a70db7305f84a19c441c735f5895a/LICENSE"
+  },
+  "package.json @ 1780c3f3126a70db7305f84a19c441c735f5895a": {
+   "bytes": 1664,
+   "sha256": "7916cc5b0583f98a6972600ea7adc74f4ba11d086775e8ebada1f8a793c37abb",
+   "url": "https://raw.githubusercontent.com/nitrosend/cli/1780c3f3126a70db7305f84a19c441c735f5895a/package.json"
+  },
+  "published llms.txt": {
+   "bytes": 131904,
+   "sha256": "19a451ea3a19c295f9ae44b791c75350c9255d198c7ae1e3ad405133d1df2eab",
+   "url": "https://docs.nitrosend.com/llms.txt"
+  }
+ },
+ "base_url": "https://docs.nitrosend.com",
+ "documented_api_pages": 464,
+ "documented_cli_pages": 6,
+ "documented_operations": 304,
+ "page_results": [
+  {
+   "bytes": 41523,
+   "generator": "Sourcey 3.8.3",
+   "path": "/",
+   "status": 200
+  },
+  {
+   "bytes": 31364,
+   "generator": "Sourcey 3.8.3",
+   "path": "/cli/overview/",
+   "status": 200
+  },
+  {
+   "bytes": 36090,
+   "generator": "Sourcey 3.8.3",
+   "path": "/cli/reference/",
+   "status": 200
+  },
+  {
+   "bytes": 53181,
+   "generator": "Sourcey 3.8.3",
+   "path": "/cli/install/",
+   "status": 200
+  },
+  {
+   "bytes": 48121,
+   "generator": "Sourcey 3.8.3",
+   "path": "/cli/agent-mode/",
+   "status": 200
+  },
+  {
+   "bytes": 41079,
+   "generator": "Sourcey 3.8.3",
+   "path": "/agent-onboarding/",
+   "status": 200
+  },
+  {
+   "bytes": 36815,
+   "generator": "Sourcey 3.8.3",
+   "path": "/authentication/",
+   "status": 200
+  },
+  {
+   "bytes": 131904,
+   "generator": null,
+   "path": "/llms.txt",
+   "status": 200
+  }
+ ],
+ "pages_checked": 8,
+ "pages_ok": 8,
+ "pinned_commit": "1780c3f3126a70db7305f84a19c441c735f5895a",
+ "spot_checks": [
+  {
+   "found": true,
+   "http_status": 200,
+   "needle": "Nitrosend",
+   "path": "/",
+   "why": "the landing page names the documented product"
+  },
+  {
+   "found": true,
+   "http_status": 200,
+   "needle": "sourcey",
+   "path": "/",
+   "why": "the landing page carries the Sourcey generator assets"
+  },
+  {
+   "found": true,
+   "http_status": 200,
+   "needle": "nitrosend",
+   "path": "/cli/overview/",
+   "why": "the CLI overview documents the nitrosend CLI"
+  },
+  {
+   "found": true,
+   "http_status": 200,
+   "needle": "Command reference",
+   "path": "/cli/reference/",
+   "why": "the CLI reference page is the command reference"
+  },
+  {
+   "found": true,
+   "http_status": 200,
+   "needle": "nitrosend send",
+   "path": "/cli/reference/",
+   "why": "the command reference documents the send command"
+  },
+  {
+   "found": true,
+   "http_status": 200,
+   "needle": "npm",
+   "path": "/cli/install/",
+   "why": "the install page documents how to install the CLI"
+  },
+  {
+   "found": true,
+   "http_status": 200,
+   "needle": "MCP",
+   "path": "/agent-onboarding/",
+   "why": "the agent onboarding page documents the agent path"
+  },
+  {
+   "found": true,
+   "http_status": 200,
+   "needle": "Nitrosend",
+   "path": "/llms.txt",
+   "why": "llms.txt is the agent-readable index of the reference"
+  },
+  {
+   "found": true,
+   "http_status": 200,
+   "needle": "operation-",
+   "path": "/llms.txt",
+   "why": "llms.txt lists the generated API operation pages"
+  }
+ ],
+ "spot_checks_passed": 9,
+ "spot_checks_total": 9,
+ "target_repo": "https://github.com/nitrosend/cli",
+ "verdict": "PASS"
+}

@@ -1,0 +1,63 @@
+{
+ "schema": "runx.receipt.v1",
+ "id": "sha256:6300d36125ac96b7da19d7cb48ebef6be84e5e0f72df2a8514897803d23551b6",
+ "created_at": "2026-10-22T12:41:10.954Z",
+ "canonicalization": "runx.receipt.c14n.v1",
+ "issuer": {
+  "type": "local",
+  "kid": "local-eec8d1a43965434999916279ffe6c27ff4e7270a0664eee9c6b8546c5d00f9a0",
+  "public_key_sha256": "sha256:eec8d1a43965434999916279ffe6c27ff4e7270a0664eee9c6b8546c5d00f9a0"
+ },
+ "signature": {
+  "alg": "Ed25519",
+  "value": "base64:R-I3QDk5X8lW6f_o5prvxya9PVcXp1UW7KqcZl6_hEx_sFZQMOvHaj0XGxesvg24vsIw1M-EX4MVLiJ8RSf7BQ"
+ },
+ "digest": "sha256:48652934738566fc7c6b945505aed266460f48d4a2ada924903f95d636961061",
+ "subject": {
+  "kind": "step",
+  "ref": {
+   "type": "run",
+   "uri": "runx:run:run_nitrosend-docs-verify_01a163a11fb0a0121762cfb7#verify",
+   "label": "nitrosend-docs-verify"
+  },
+  "outcome": "sha256:c2b378fe0d66d784c610103fb9adb370752d767216547c16bfcee10361499f91"
+ },
+ "authority": {
+  "grant_refs": [],
+  "scope_refs": [],
+  "terms": [],
+  "derivations": [],
+  "enforcement": {
+   "execution_boundary": {
+    "kind": "trusted_host_process"
+   }
+  }
+ },
+ "decisions": [],
+ "acts": [],
+ "seal": {
+  "disposition": "closed",
+  "criteria": [
+   {
+    "criterion_id": "step_outcome",
+    "status": "verified",
+    "evidence_refs": [],
+    "verification_refs": []
+   },
+   {
+    "criterion_id": "output_contract_verified",
+    "status": "verified",
+    "evidence_refs": [],
+    "verification_refs": [
+     {
+      "type": "verification",
+      "uri": "runx:verification:output_contract_verified:sha256:84dd2557aeddb7f13dd570feb30ab5b4a5fbc875b9eb2cb4d9fcd4f44d7bf425"
+     }
+    ]
+   }
+  ]
+ },
+ "lineage": {
+  "children": []
+ }
+}
