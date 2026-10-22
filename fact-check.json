@@ -1,0 +1,380 @@
+{
+ "schema": "spore.factcheck.v1",
+ "packet": "https://asporeteam.github.io/nitrosend-cli-docs-packet",
+ "public_url": "https://docs.nitrosend.com/",
+ "receipt_ref": "runx:receipt:sha256:feaeaaa603c16fff5da614afdd4984e149553ce5cfc1bf3f4bd809ff4fd9a216",
+ "measured_utc": "2026-10-22T12:53:34Z",
+ "measurements": {
+  "github_cli": {
+   "stars": 88,
+   "forks": 2,
+   "pushed_at": "2026-10-21T09:58:36Z"
+  },
+  "llms_txt": {
+   "bytes": 131904,
+   "sha256": "19a451ea3a19c295f9ae44b791c75350c9255d198c7ae1e3ad405133d1df2eab",
+   "links": 585,
+   "api_links": 464,
+   "operation_links": 303,
+   "operation_tokens": 304
+  },
+  "sitemap_urls": 64,
+  "api_index_bytes": 32742055,
+  "documented_pages_200": 7,
+  "generator_tags": 7,
+  "commands": 23,
+  "cli_category_headings": 11
+ },
+ "vendor_pipeline": {
+  "repo": "https://github.com/nitrosend/docs",
+  "sourcey_config_sha256": "3384861c7912534502232ebc5325dea389cd82494bd6507cf9c334ade3269193",
+  "docs_package_json_sha256": "52517f1dff4b5c5f708ed6ba84985c056b78d16f8ac1ec28992413177d7ef72e",
+  "siteUrl": "https://docs.nitrosend.com",
+  "sourcey_version": "^3.8.3",
+  "cli_dev_dependency": "0.3.9",
+  "prebuild": "node scripts/check-plan-shape-content.mjs && node scripts/generate-cli-reference.mjs"
+ },
+ "checks": [
+  {
+   "id": "packet.evidence.json",
+   "claim": "evidence.json is published and answers 200",
+   "status": "PASS",
+   "expected": "200",
+   "actual": "200",
+   "source": "https://asporeteam.github.io/nitrosend-cli-docs-packet/evidence.json"
+  },
+  {
+   "id": "packet.report.md",
+   "claim": "report.md is published and answers 200",
+   "status": "PASS",
+   "expected": "200",
+   "actual": "200",
+   "source": "https://asporeteam.github.io/nitrosend-cli-docs-packet/report.md"
+  },
+  {
+   "id": "packet.receipt.json",
+   "claim": "receipt.json is published and answers 200",
+   "status": "PASS",
+   "expected": "200",
+   "actual": "200",
+   "source": "https://asporeteam.github.io/nitrosend-cli-docs-packet/receipt.json"
+  },
+  {
+   "id": "packet.receipt-public-key.json",
+   "claim": "receipt-public-key.json is published and answers 200",
+   "status": "PASS",
+   "expected": "200",
+   "actual": "200",
+   "source": "https://asporeteam.github.io/nitrosend-cli-docs-packet/receipt-public-key.json"
+  },
+  {
+   "id": "packet.receipt-step.json",
+   "claim": "receipt-step.json is published and answers 200",
+   "status": "PASS",
+   "expected": "200",
+   "actual": "200",
+   "source": "https://asporeteam.github.io/nitrosend-cli-docs-packet/receipt-step.json"
+  },
+  {
+   "id": "packet.verification-output.json",
+   "claim": "verification-output.json is published and answers 200",
+   "status": "PASS",
+   "expected": "200",
+   "actual": "200",
+   "source": "https://asporeteam.github.io/nitrosend-cli-docs-packet/verification-output.json"
+  },
+  {
+   "id": "packet.README.md",
+   "claim": "README.md is published and answers 200",
+   "status": "PASS",
+   "expected": "200",
+   "actual": "200",
+   "source": "https://asporeteam.github.io/nitrosend-cli-docs-packet/README.md"
+  },
+  {
+   "id": "packet.verify-nitrosend.py",
+   "claim": "verify-nitrosend.py is published and answers 200",
+   "status": "PASS",
+   "expected": "200",
+   "actual": "200",
+   "source": "https://asporeteam.github.io/nitrosend-cli-docs-packet/verify-nitrosend.py"
+  },
+  {
+   "id": "receipt.ref_matches_receipt_id",
+   "claim": "evidence.artifacts.receipt_ref names the sealed receipt that is published",
+   "status": "PASS",
+   "expected": "runx:receipt:sha256:feaeaaa603c16fff5da614afdd4984e149553ce5cfc1bf3f4bd809ff4fd9a216",
+   "actual": "runx:receipt:sha256:feaeaaa603c16fff5da614afdd4984e149553ce5cfc1bf3f4bd809ff4fd9a216",
+   "source": "https://asporeteam.github.io/nitrosend-cli-docs-packet"
+  },
+  {
+   "id": "receipt.digest",
+   "claim": "the published receipt's digest field is a sha256 of the receipt body",
+   "status": "PASS",
+   "expected": "sha256:...",
+   "actual": "sha256:6adc9686a2ff559ad",
+   "source": "https://asporeteam.github.io/nitrosend-cli-docs-packet"
+  },
+  {
+   "id": "receipt.pubkey_matches_issuer",
+   "claim": "the published public key is the key the receipt names (sha256 of key == issuer.public_key_sha256)",
+   "status": "PASS",
+   "expected": "sha256:eec8d1a43965434999916279ffe6c27ff4e7270a0664eee9c6b8546c5d00f9a0",
+   "actual": "sha256:eec8d1a43965434999916279ffe6c27ff4e7270a0664eee9c6b8546c5d00f9a0",
+   "source": "https://asporeteam.github.io/nitrosend-cli-docs-packet"
+  },
+  {
+   "id": "receipt.pubkey_is_not_the_seed",
+   "claim": "only a public key is published (no seed material in the published key file)",
+   "status": "PASS",
+   "expected": "no seed",
+   "actual": "no seed",
+   "source": "https://asporeteam.github.io/nitrosend-cli-docs-packet"
+  },
+  {
+   "id": "receipt.runx_verify",
+   "claim": "runx verify on the published receipt bytes says valid",
+   "status": "PASS",
+   "expected": true,
+   "actual": true,
+   "source": "/srv/shared/gc/notes/runx-cli/runx"
+  },
+  {
+   "id": "upstream.cli_facts",
+   "claim": "nitrosend/cli is public, MIT, TypeScript and not archived",
+   "status": "PASS",
+   "expected": "archived=False MIT TypeScript",
+   "actual": "archived=False license=MIT lang=TypeScript",
+   "source": "api.github.com/repos/nitrosend/cli"
+  },
+  {
+   "id": "upstream.pinned_commit",
+   "claim": "the pinned commit exists and is the 0.3.9 release commit of 2026-10-21",
+   "status": "PASS",
+   "expected": "sha 1780c3f3 / 2026-10-21 / 0.3.9",
+   "actual": "1780c3f3 2026-10-21 chore(release): 0.3.9",
+   "source": "api.github.com/repos/nitrosend/cli/commits/1780c3f3..."
+  },
+  {
+   "id": "vendor.pipeline_siteurl",
+   "claim": "the vendor's own Sourcey config sets siteUrl to the delivered public_url",
+   "status": "PASS",
+   "expected": "siteUrl = docs.nitrosend.com",
+   "actual": "present",
+   "source": "raw.githubusercontent.com/nitrosend/docs/main/sourcey.config.ts"
+  },
+  {
+   "id": "vendor.sourcey_version",
+   "claim": "the vendor's docs package pins the same Sourcey version the live pages carry",
+   "status": "PASS",
+   "expected": "sourcey 3.8.3 == live generator tag",
+   "actual": "^3.8.3",
+   "source": "raw.githubusercontent.com/nitrosend/docs/main/package.json"
+  },
+  {
+   "id": "vendor.cli_version",
+   "claim": "the vendor's docs package builds the CLI reference against the pinned CLI version",
+   "status": "PASS",
+   "expected": "@nitrosend/cli 0.3.9",
+   "actual": "0.3.9",
+   "source": "raw.githubusercontent.com/nitrosend/docs/main/package.json"
+  },
+  {
+   "id": "vendor.openapi_adapter",
+   "claim": "the API reference tab is generated from the vendor's OpenAPI source",
+   "status": "PASS",
+   "expected": "openapi(https://api.nitrosend.com/openapi.yaml)",
+   "actual": "present",
+   "source": "raw.githubusercontent.com/nitrosend/docs/main/sourcey.config.ts"
+  },
+  {
+   "id": "site.documented_pages_200",
+   "claim": "the 7 documented pages of the reference answer 200",
+   "status": "PASS",
+   "expected": "7 of 7",
+   "actual": "7 of 7",
+   "source": "https://docs.nitrosend.com"
+  },
+  {
+   "id": "site.generator_tag",
+   "claim": "every documented page carries the Sourcey 3.8.3 generator marker",
+   "status": "PASS",
+   "expected": "7 of 7",
+   "actual": "7 of 7",
+   "source": "https://docs.nitrosend.com"
+  },
+  {
+   "id": "site.llms_digest",
+   "claim": "the published llms.txt matches the digest recorded in evidence.json",
+   "status": "PASS",
+   "expected": "19a451ea3a19c295f9ae44b791c75350c9255d198c7ae1e3ad405133d1df2eab",
+   "actual": "19a451ea3a19c295f9ae44b791c75350c9255d198c7ae1e3ad405133d1df2eab",
+   "source": "https://docs.nitrosend.com/llms.txt"
+  },
+  {
+   "id": "site.llms_size",
+   "claim": "the published llms.txt size matches the size recorded in evidence.json",
+   "status": "PASS",
+   "expected": "131904",
+   "actual": "131904",
+   "source": "https://docs.nitrosend.com/llms.txt"
+  },
+  {
+   "id": "site.sitemap_urls",
+   "claim": "the published sitemap carries 64 URLs",
+   "status": "PASS",
+   "expected": "64",
+   "actual": "64",
+   "source": "https://docs.nitrosend.com/sitemap.xml"
+  },
+  {
+   "id": "site.api_index_size",
+   "claim": "the /api/ index page size matches the number in the report",
+   "status": "PASS",
+   "expected": "32,742,055 bytes",
+   "actual": "32742055",
+   "source": "https://docs.nitrosend.com/api/"
+  },
+  {
+   "id": "site.gap_cli_send",
+   "claim": "no per-command page: /cli/send/ answers 404",
+   "status": "PASS",
+   "expected": "404",
+   "actual": "404",
+   "source": "https://docs.nitrosend.com/cli/send/"
+  },
+  {
+   "id": "site.gap_v0.3.9",
+   "claim": "not versioned: /v0.3.9/ answers 404",
+   "status": "PASS",
+   "expected": "404",
+   "actual": "404",
+   "source": "https://docs.nitrosend.com/v0.3.9/"
+  },
+  {
+   "id": "site.gap_sdk",
+   "claim": "SDK not documented: /sdk/ answers 404",
+   "status": "PASS",
+   "expected": "404",
+   "actual": "404",
+   "source": "https://docs.nitrosend.com/sdk/"
+  },
+  {
+   "id": "site.command_count",
+   "claim": "the command reference documents 23 distinct commands",
+   "status": "PASS",
+   "expected": "23",
+   "actual": "23",
+   "source": "https://docs.nitrosend.com/cli/reference"
+  },
+  {
+   "id": "site.category_headings",
+   "claim": "the CLI reference is one page under 11 category headings",
+   "status": "PASS",
+   "expected": "11",
+   "actual": "11",
+   "source": "https://docs.nitrosend.com/cli/reference"
+  },
+  {
+   "id": "site.flag_count",
+   "claim": "the CLI reference documents the flag count the report claims",
+   "status": "PASS",
+   "expected": "53",
+   "actual": "53",
+   "source": "https://docs.nitrosend.com/cli/reference"
+  },
+  {
+   "id": "report.stars_forks",
+   "claim": "the report states the star/fork counts measured on GitHub",
+   "status": "PASS",
+   "expected": "true",
+   "actual": "github now: 88 stars / 2 forks",
+   "source": "published report.md"
+  },
+  {
+   "id": "report.no_bogus_forks",
+   "claim": "the report does not claim a fork count of 94",
+   "status": "PASS",
+   "expected": "true",
+   "actual": "no '94 forks'",
+   "source": "published report.md"
+  },
+  {
+   "id": "report.api_bytes",
+   "claim": "the report's /api/ byte count equals the measured content-length",
+   "status": "PASS",
+   "expected": "true",
+   "actual": "measured 32742055",
+   "source": "published report.md"
+  },
+  {
+   "id": "report.api_link_count",
+   "claim": "the report's API-link count equals the measured 464",
+   "status": "PASS",
+   "expected": "true",
+   "actual": "measured 464",
+   "source": "published report.md"
+  },
+  {
+   "id": "report.operation_counts",
+   "claim": "the report's operation counts equal the measured link/token counts",
+   "status": "PASS",
+   "expected": "true",
+   "actual": "measured 303 links / 304 tokens",
+   "source": "published report.md"
+  },
+  {
+   "id": "report.llms_bytes",
+   "claim": "the report's llms.txt size equals the measured size",
+   "status": "PASS",
+   "expected": "true",
+   "actual": "measured 131904",
+   "source": "published report.md"
+  },
+  {
+   "id": "report.sitemap_urls",
+   "claim": "the report's sitemap URL count equals the measured count",
+   "status": "PASS",
+   "expected": "true",
+   "actual": "measured 64",
+   "source": "published report.md"
+  },
+  {
+   "id": "report.vendor_pipeline",
+   "claim": "the report points at the vendor's own Sourcey pipeline proof",
+   "status": "PASS",
+   "expected": "true",
+   "actual": "mentions github.com/nitrosend/docs",
+   "source": "published report.md"
+  },
+  {
+   "id": "report.receipt_ref",
+   "claim": "the report binds the same receipt_ref as the delivery",
+   "status": "PASS",
+   "expected": "true",
+   "actual": "sha256:feaeaaa603c16fff5da614afdd4984e149553ce5cfc1bf3f4bd809ff4fd9a216",
+   "source": "published report.md"
+  },
+  {
+   "id": "report.command_count",
+   "claim": "the report states the measured command count",
+   "status": "PASS",
+   "expected": "true",
+   "actual": "measured 23",
+   "source": "published report.md"
+  },
+  {
+   "id": "report.flag_count",
+   "claim": "the report states the measured flag count",
+   "status": "PASS",
+   "expected": "true",
+   "actual": "measured 53",
+   "source": "published report.md"
+  }
+ ],
+ "summary": {
+  "total": 42,
+  "pass": 42,
+  "fail": 0
+ }
+}
